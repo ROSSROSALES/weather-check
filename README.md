@@ -7,6 +7,13 @@
     With regards to this project's connection to our pod's open source project, we installed the eslint-plugin-react extension to execute this application. We used this plugin because we wanted to ensure that the code was written with proper syntax. Furthermore, we used this plugin to ensure that the code was structured in accordance to React JS rules. 
 
 
+# Project Scope
+
+This is a real-time weather app that allows a user to enter the name of their city and/or state/province and find out real-time weather information regarding said locality. The app is very intuitive in that it is very easy and simple to use. With one click, the user can find out accurate information regarding the weather from the city of their choice. 
+
+    Athough simple, when building this app, there were a few issues we ran into regarding its construction. One issue was finding an appropriate API for usage. This presented a challenge because not all API's are created equally. Some API's required a foreign key while others did not. Some API's required CORS implementation, while others did not. Finding the appropriate API for this project was indeed challenging, but necessary to ensure the proper execution of the application. 
+
+    With regards to this project's connection to our pod's open source project, we installed the eslint-plugin-react extension to execute this application. We used this plugin because we wanted to ensure that the code was written with proper syntax. Furthermore, we used this plugin to ensure that the code was structured in accordance to React JS rules. 
 
 # Getting Started with Create React App
 
