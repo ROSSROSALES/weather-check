@@ -1,3 +1,9 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
 # Project Scope
 
 This is a real-time weather app that allows a user to enter the name of their city and/or state/province and find out real-time weather information regarding said locality. The app is very intuitive in that it is very easy and simple to use. With one click, the user can find out accurate information regarding the weather from the city of their choice. 
@@ -79,3 +85,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/ROSSROSALES/-current-weather-location
+[contributors-url]: https://github.com/ROSSROSALES/-current-weather-location/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ROSSROSALES/-current-weather-location
+[forks-url]: https://github.com/ROSSROSALES/-current-weather-location/network/members
+[stars-shield]: https://img.shields.io/github/stars/ROSSROSALES/-current-weather-location
+[stars-url]: https://github.com/ROSSROSALES/-current-weather-location/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ROSSROSALES/-current-weather-location
+[issues-url]: https://github.com/ROSSROSALES/-current-weather-location/issues
+[license-shield]: https://img.shields.io/github/license/ROSSROSALES/-current-weather-location
+[license-url]: https://github.com/ROSSROSALES/-current-weather-location/blob/master/LICENSE.md
