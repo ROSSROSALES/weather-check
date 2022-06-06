@@ -6,6 +6,9 @@ Athough simple, when building this app, there were a few issues we ran into rega
 
 With regards to this project's connection to our pod's open source project, we installed the eslint-plugin-react extension to execute this application. We used this plugin because we wanted to ensure that the code was written with proper syntax. Furthermore, we used this plugin to ensure that the code was structured in accordance to React JS rules. 
 
+![Simple Weather App](https://user-images.githubusercontent.com/52366381/172101559-21f44e99-9339-468b-9c22-9103d36a21c5.JPG)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
