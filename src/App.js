@@ -1,14 +1,8 @@
-// This file has the bulk of the code. It contains major functions, variables, local storage. 
-
 import React, { useState, useRef } from 'react';
-//import { NameOrigin } from './NameOrigin';
-//import { nametobesearched } from './nametobesearched';
-
-
 
 function App() {
-  const [curname, setName] = useState(''); //[first, second]: first is current state, second function that allows up to update current state
-  const nameInput = useRef() // Uses imported package
+  const [curname, setName] = useState(''); 
+  const nameInput = useRef()
   const [icon, seticon] = useState()
   const [condition, setCondition] = useState()
   const [temp_f, setTempf] = useState()
@@ -17,7 +11,6 @@ function App() {
   const [localtime, setlocaltime] = useState()
   
   
-
   function SearchName() {
     const name = nameInput.current.value
     setName(name)
@@ -29,9 +22,8 @@ function App() {
         'X-RapidAPI-Key': 'cd4262cdfemshad95db473709b99p1bae6bjsn69100feb95ec'
       }
     };
-    
     fetch('https://weatherapi-com.p.rapidapi.com/current.json?q=' + name, options)
-    .then((data) => {
+      .then((data) => {
       return data.json();
     }).then((completedata) => {
         console.log(completedata)
@@ -41,14 +33,11 @@ function App() {
         setFeelslikef(completedata.current.feelslike_f)
         setGustmph(completedata.current.gust_mph)
         setlocaltime(completedata.location.localtime)
-
-        
       });
-    
 
-    if (name === '') return /// '===' is used to match both value and data type, '==' matches only value
-    console.log(name) //in console.log (inspect webpage)
-    nameInput.current.value=null //clears text box
+    if (name === '') return
+    console.log(name)
+    nameInput.current.value=null
   }
   return (
     <>
@@ -56,11 +45,8 @@ function App() {
     <input ref={nameInput} type="text"/>
     <button onClick={SearchName}>Search</button>
     <p></p>
-
-    <img src={icon} alt="icon" />
+    <img src={icon} alt="" />
     <p><b>Weather in: </b>{curname}</p>
-    
-    
     <p><b>Condition: </b>{condition} </p>
     <p><b>Current Temp: </b>{temp_f}<span>&#176;</span>F</p>
     <p><b>Feels Like: </b>{feelslike_f}<span>&#176;</span>F</p>
@@ -70,4 +56,4 @@ function App() {
   )
 }
 
-export default App; // this file is exported to index.js, in index.js this file is imported
+export default App;
