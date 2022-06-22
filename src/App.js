@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import "typeface-roboto";
+import './App.css';
   
 function App() {
 
@@ -72,31 +73,34 @@ function App() {
     }
     nameInput.current.value=null
     }
-    
-    const handleKeyDown = (event) => {
-      if (event.key === 'Enter') {
-        console.log('Search Submitted')
-        SearchName()
-      }
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      console.log('Search Submitted')
+      SearchName()
     }
+  }  
+    
 
     
   return (
     <>
-    <p className="App-intro">Most Recent Shooting in USA: {apiResponse}</p>
-    <h1>Weather</h1>
-    <input ref={nameInput} type="text" placeholder="Location" onKeyDown={handleKeyDown}/>
-    <button onClick={SearchName}>Search</button>
-    <p></p>
-    <img src={icon} alt="" />
-    <p><b>Weather in: </b>{curname}</p>
-    <p><b>Condition: </b>{condition} </p>
-    <p><b>Current Temp: </b>{temp_f}<span>&#176;</span>F</p>
-    <p><b>Feels Like: </b>{feelslike_f}<span>&#176;</span>F</p>
-    <p><b>Winds: </b>{gust_mph}mph</p>
-    <p><b>Date/Time: </b>{localtime}</p>
-    <p>&quot;{quote}&quot; - {character}</p>
-    <div>{anime}</div>
+    <div className="centerText"> 
+      <p className="App-intro">Most Recent Shooting in USA: {apiResponse}</p>
+      <h1 >Weather</h1>
+      <input className="centerText" ref={nameInput} type="text" placeholder="Location" onKeyDown={handleKeyDown}/>
+      <button className="centerText" onClick={SearchName}>Search</button>
+      <p></p>
+      <img src={icon} alt="" />
+      <p><b>Weather in: </b>{curname}</p>
+      <p><b>Condition: </b>{condition} </p>
+      <p><b>Current Temp: </b>{temp_f}<span>&#176;</span>F</p>
+      <p><b>Feels Like: </b>{feelslike_f}<span>&#176;</span>F</p>
+      <p><b>Winds: </b>{gust_mph}mph</p>
+      <p><b>Date/Time: </b>{localtime}</p>
+      <p>&quot;{quote}&quot; - {character}</p>
+      <div>{anime}</div>
+    </div>
     </>
   );
 }
