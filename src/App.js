@@ -8,7 +8,7 @@ function App() {
   function shooting_scraper_api() {
     fetch('http://localhost:9000/testAPI')
       .then(res => res.text())
-      .then(res => setapiResponse(res));
+      .then(res =>   setapiResponse(res));
   }
   shooting_scraper_api()
 
@@ -71,15 +71,21 @@ function App() {
       weatherapi()
     }
     nameInput.current.value=null
-
-
     }
+    
+    const handleKeyDown = (event) => {
+      if (event.key === 'Enter') {
+        console.log('Search Submitted')
+        SearchName()
+      }
+    }
+
     
   return (
     <>
     <p className="App-intro">Most Recent Shooting in USA: {apiResponse}</p>
     <h1>Weather</h1>
-    <input ref={nameInput} type="text"/>
+    <input ref={nameInput} type="text" placeholder="Location" onKeyDown={handleKeyDown}/>
     <button onClick={SearchName}>Search</button>
     <p></p>
     <img src={icon} alt="" />
