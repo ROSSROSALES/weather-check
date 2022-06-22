@@ -25,6 +25,8 @@ function App() {
   const [character, setCharacter] = useState()
   const [quote, setQuote] = useState()
 
+  
+
   function SearchName() {
     const name = nameInput.current.value
     if (name != '') {
@@ -46,9 +48,9 @@ function App() {
           console.log(completedata)
           seticon(completedata.current.condition.icon)
           setCondition(completedata.current.condition.text)
-          setTempf(completedata.current.temp_f)
-          setFeelslikef(completedata.current.feelslike_f)
-          setGustmph(completedata.current.gust_mph)
+          setTempf("Current: " + completedata.current.temp_f + "\u00B0F")
+          setFeelslikef("Feels Like: " + completedata.current.feelslike_f + "\u00B0F")
+          setGustmph(completedata.current.gust_mph + "mph")
           setlocaltime(completedata.location.localtime)
         });
       }
@@ -60,8 +62,8 @@ function App() {
         .then((completedata) => {
           console.log(completedata)
           setAnime(completedata.anime)
-          setCharacter(completedata.character)
-          setQuote(completedata.quote)
+          setCharacter("- " + completedata.character)
+          setQuote("\"" + completedata.quote + "\"")
         });
       }
     animequote()
@@ -85,22 +87,23 @@ function App() {
     
   return (
     <>
-    <div className="centerText"> 
-      <p className="App-intro">Most Recent Shooting in USA: {apiResponse}</p>
-      <h1 >Weather</h1>
-      <input className="centerText" ref={nameInput} type="text" placeholder="Location" onKeyDown={handleKeyDown}/>
-      <button className="centerText" onClick={SearchName}>Search</button>
-      <p></p>
-      <img src={icon} alt="" />
-      <p><b>Weather in: </b>{curname}</p>
-      <p><b>Condition: </b>{condition} </p>
-      <p><b>Current Temp: </b>{temp_f}<span>&#176;</span>F</p>
-      <p><b>Feels Like: </b>{feelslike_f}<span>&#176;</span>F</p>
-      <p><b>Winds: </b>{gust_mph}mph</p>
-      <p><b>Date/Time: </b>{localtime}</p>
-      <p>&quot;{quote}&quot; - {character}</p>
-      <div>{anime}</div>
-    </div>
+        <div className="centerText"> 
+          <p className="App-intro">Most Recent Shooting in USA: {apiResponse}</p>
+          <input className="centerText" ref={nameInput} type="text" placeholder="Location" onKeyDown={handleKeyDown}/>
+          <button className="centerText" onClick={SearchName}>Search</button>
+          <p>
+            <img src={icon} alt="" />
+          </p>
+          
+          <p>{curname}</p>
+          <p>{condition} </p>
+          <p>{temp_f}</p>
+          <p>{feelslike_f}</p>
+          <p>{gust_mph}</p>
+          <p>{localtime}</p>
+          <p>{quote} {character}</p>
+          <div>{anime}</div>
+        </div>
     </>
   );
 }
