@@ -56,7 +56,7 @@ function App() {
       }
 
     function animequote() {
-      fetch('https://animechan.vercel.app/api/random')
+      fetch('https://animechan.xyz/api/random')
         .then((data) => {
         return data.json()})
         .then((completedata) => {
