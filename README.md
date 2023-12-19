@@ -8,7 +8,7 @@
 
 **Update**
 
-***Added feature to show most recent shooting in america. With the weekly news of mass shootings, checking the news for shootings is like checking the weather..***
+***Added feature to show most recent tragedies in america. With the weekly news of tragedies, checking the news is like checking the weather..***
 
 This is a real-time weather app that allows a user to enter the name of their city and/or state/province and find out real-time weather information regarding said locality. The app is very intuitive in that it is very easy and simple to use. With one click, the user can find out accurate information regarding the weather from the city of their choice. 
 
